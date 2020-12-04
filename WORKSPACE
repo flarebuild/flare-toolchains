@@ -17,8 +17,8 @@ load("@bazel_toolchains//rules:rbe_repo.bzl", "rbe_autoconfig")
 # see https://github.com/gorilych/bazel-toolchains/blob/master/rules/rbe_repo.bzl#L177
 
 load(
-    "//configs/ubuntu2004:versions.bzl",
-    toolchain_config_suite_autogen_spec = "TOOLCHAIN_CONFIG_AUTOGEN_SPEC",
+    "//configs/ubuntu2004:repo.bzl",
+    "ubuntu2004_toolchain_config_suite_spec",
 )
 
 # Automatic config generation target for RBE Ubuntu 20.04
@@ -26,11 +26,5 @@ rbe_autoconfig(
     name = "rbe_autoconfig_autogen_ubuntu2004",
     export_configs = True,
     java_home = "/usr/lib/jvm/java-11-openjdk-amd64",
-    toolchain_config_suite_spec = {
-        "container_registry": "gcr.io",
-        "container_repo": "flare-build-alpha/ubuntu2004-rbe",
-        "output_base": "configs/ubuntu2004",
-        "repo_name": "flare_toolchains",
-        "toolchain_config_suite_autogen_spec": toolchain_config_suite_autogen_spec,
-    },
+    toolchain_config_suite_spec = ubuntu2004_toolchain_config_suite_spec,
 )

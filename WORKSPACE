@@ -21,10 +21,25 @@ load(
     "ubuntu2004_toolchain_config_suite_spec",
 )
 
+load(
+    "//configs/ubuntu2004_clang:repo.bzl",
+    "ubuntu2004_clang_toolchain_config_suite_spec",
+)
+
 # Automatic config generation target for RBE Ubuntu 20.04
 rbe_autoconfig(
     name = "rbe_autoconfig_autogen_ubuntu2004",
     export_configs = True,
     java_home = "/usr/lib/jvm/java-11-openjdk-amd64",
     toolchain_config_suite_spec = ubuntu2004_toolchain_config_suite_spec,
+)
+
+rbe_autoconfig(
+    name = "rbe_autoconfig_autogen_ubuntu2004_clang",
+    export_configs = True,
+    java_home = "/usr/lib/jvm/java-11-openjdk-amd64",
+    env = {
+        "CC": "clang",
+    },
+    toolchain_config_suite_spec = ubuntu2004_clang_toolchain_config_suite_spec,
 )

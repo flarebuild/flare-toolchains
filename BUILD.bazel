@@ -1,0 +1,7 @@
+load("defs.bzl", "rbe_configs_gen")
+
+rbe_configs_gen(
+    name = "ubuntu2004_config",
+    path = "ubuntu2004",
+    image = "gcr.io/flare-build-alpha/ubuntu2004-rbe:latest"
+)

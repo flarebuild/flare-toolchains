@@ -33,5 +33,7 @@ RUN apt-get update -y && \
     libperl5.30 libssl1.1 locales locales-all netcat netcat-traditional \
     openssh-client patch perl perl-base perl-modules-5.30 unzip wget zip
 
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
+
 RUN wget -qO- -c https://dl.google.com/go/go${GOVERSION}.linux-amd64.tar.gz | tar xzf - -C /usr/local
 

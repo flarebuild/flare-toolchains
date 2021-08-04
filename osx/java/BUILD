@@ -20,5 +20,5 @@ package(default_visibility = ["//visibility:public"])
 java_runtime(
     name = "jdk",
     srcs = [],
-    java_home = "/Library/Java/JavaVirtualMachines/jdk-16.0.1.jdk/Contents/Home",
+    java_home = "/usr/local/Cellar/openjdk@11/11.0.10/libexec/openjdk.jdk/Contents/Home",
 )

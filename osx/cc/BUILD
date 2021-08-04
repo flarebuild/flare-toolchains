@@ -84,8 +84,8 @@ cc_toolchain_suite(
 [
     cc_toolchain_config(
         extra_env = { 
-            "DEVELOPER_DIR": "/Applications/Xcode.12.4.app/Contents/Developer",
-            "SDKROOT": "/Applications/Xcode.12.4.app/Contents/Developer/Platforms/%{apple_sdk_platform_value}.platform/Developer/SDKs/%{apple_sdk_platform_value}%{apple_sdk_version_override_value}.sdk",
+            "DEVELOPER_DIR": "/Applications/Xcode.app/Contents/Developer",
+            "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/%{apple_sdk_platform_value}.platform/Developer/SDKs/%{apple_sdk_platform_value}%{apple_sdk_version_override_value}.sdk",
         },
         name = (arch if arch != "armeabi-v7a" else "stub_armeabi-v7a"),
         compiler = "compiler",

@@ -38,6 +38,16 @@ container_load(
     file = "@ubuntu2004-rbe-dockerfile//image:dockerfile_image.tar",
 )
 
+dockerfile_image(
+    name = "ubuntu2104-rbe-dockerfile",
+    dockerfile = "//dockerfiles/ubuntu2104-rbe:Dockerfile",
+)
+
+container_load(
+    name = "ubuntu2104-rbe",
+    file = "@ubuntu2104-rbe-dockerfile//image:dockerfile_image.tar",
+)
+
 
 
 # BEGIN rbe_configs_gen

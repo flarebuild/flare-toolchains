@@ -1,0 +1,11 @@
+load("@io_bazel_rules_docker//container:container.bzl", "container_push")
+
+container_push(
+   name = "push",
+   image = "@ubuntu2104-rbe//image",
+   format = "Docker",
+   registry = "gcr.io",
+   repository = "flare-build-alpha/ubuntu2104-rbe",
+   tag = "latest",
+)
+

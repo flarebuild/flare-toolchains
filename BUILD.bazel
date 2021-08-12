@@ -5,3 +5,9 @@ rbe_configs_gen(
     path = "ubuntu2004",
     image = "gcr.io/flare-build-alpha/ubuntu2004-rbe:latest"
 )
+
+rbe_configs_gen(
+    name = "ubuntu2104_config",
+    path = "ubuntu2104",
+    image = "gcr.io/flare-build-alpha/ubuntu2104-rbe:latest"
+)
